@@ -1,0 +1,20 @@
+iex abrir la REPL
+
+- existen dos tipos de extensiones en elixir una interpretada y otra compilada
+
+-> .ex   Para compilar
+-> exs   Para interprer
+
+
+-- Concatenar
+
+"Hola " <> "Mundo"
+
+
+elixir intro.exs 
+
+- para compilar un archivo es con 
+
+elixirc 4_calculadora.ex
+
+- y genera un archivo .beam ej: Elixir.Calculadora.beam
