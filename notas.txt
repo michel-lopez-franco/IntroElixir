@@ -1,0 +1,11 @@
+
+
+# Diferencia entre: %{a: 1, b: 5} vs  %{"a" => 1, "b" => 5}
+
+La diferencia principal entre %{a: 1, b: 5} y %{"a" => 1, "b" => 5} en Elixir radica en los tipos de las claves del mapa.
+
+%{a: 1, b: 5}: Este es un mapa con claves que son átomos. Los átomos son constantes cuyo nombre es su propio valor. Son comunes en Elixir para identificar módulos, funciones y claves en mapas cuando se conoce la estructura de antemano. Los átomos comienzan con : cuando se usan como valores, pero cuando se usan como claves en la sintaxis de mapa abreviada (sin :), Elixir entiende que son átomos.
+
+%{"a" => 1, "b" => 5}: Este es un mapa con claves que son cadenas de caracteres (strings). Las cadenas son secuencias de caracteres y se utilizan cuando el valor de la clave es dinámico o cuando se trabaja con datos que provienen de fuentes externas, como archivos de texto, entradas de usuario, etc.
+
+En resumen, la diferencia es el tipo de las claves: átomos en el primer caso y cadenas en el segundo. Esto puede afectar cómo accedes a los valores en el mapa y cómo interactúas con otras partes de un programa Elixir.
