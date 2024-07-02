@@ -18,3 +18,44 @@ elixir intro.exs
 elixirc 4_calculadora.ex
 
 - y genera un archivo .beam ej: Elixir.Calculadora.beam
+
+
+----------------------------- Para crear un proyecto con mix
+
+mix new hola_mundo 
+
+- Genera el proyecto en una carpeta hola_mundo con las carpetas lib y test 
+- mas modulos en https://hex.pm/packages/jason
+
+
+- ejecutar iex y probar los modulos es con 
+
+iex -S mix
+
+- y podemos usar nuestro modulo, ademas genera el directorio _build donde muestra nuestra
+aplicacion compilada 
+
+HolaMundo.hello
+
+
+--- Ejemplo 2
+
+mix new empresa 
+cd empresa
+    mix test
+
+
+
+- Añadirmos la dependencia ed mix.exp
+  defp deps do
+    [
+      # {:dep_from_hexpm, "~> 0.3.0"},
+      # {:dep_from_git, git: "https://github.com/elixir-lang/my_dep.git", tag: "0.1.0"}
+      {:jason, "~> 1.4"},
+    ]
+  end
+
+- y ejecutamos 
+
+mix deps.get
+
