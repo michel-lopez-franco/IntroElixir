@@ -1,0 +1,41 @@
+
+
+
+# Generar archivo concurrencia.exs
+# dentro añadi la funcion saludar
+
+->
+defmodule Concurrencia do
+
+  def saludar(nombre) do
+    IO.puts "Hola, #{nombre}"
+  end
+end
+
+en una iex compilamos el archivo 
+
+>c("concurrencia.exs")
+
+Ejecutamos
+
+> Concurrencia.saludar("Michel")
+
+# Evalua la expresion en la iex, iex interrumpe lo que hace invoca a saludar y una vez terminada regresa
+
+# Generar un proceso nuevo, 
+
+iex  spawn
+|       |
+|       |
+|       |
+|       
+
+
+> spawn(Concurrencia,:saludar,["Michel"])
+Hola, Michel
+#PID<0.116.0> 
+
+#PID<0.116.0>  # El id del proceso
+
+> i spawn(Concurrencia,:saludar,["Michel"])
+

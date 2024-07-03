@@ -1,0 +1,50 @@
+
+- Añadirmos la dependencia ed mix.exp
+  defp deps do
+    [
+      # {:dep_from_hexpm, "~> 0.3.0"},
+      # {:dep_from_git, git: "https://github.com/elixir-lang/my_dep.git", tag: "0.1.0"}
+      {:jason, "~> 1.4"},
+    ]
+  end
+
+- y ejecutamos 
+
+mix deps.get
+
+
+
+- iex -S mix 
+
+
+-- Trabajar con estructuras
+--- Codigo
+defmodule Empleado do
+    defstruct [:nombre, :posicion, :sueldo]
+
+end
+--- Codigo
+-> Invocacion
+%Empresa.Empleado{} 
+%Empresa.Empleado{nombre: "Michel",posicion: "Prof",sueldo: 10}
+
+
+-> Dentro de iex -S mix
+hay una funcion que se llama recompile para no tener que salir y entrar
+
+- recompile 
+
+
+
+- Documentacion del module File con funcion write 
+h(File.write)
+
+
+
+Ejemplo => 
+
+
+empleados = [%Empresa.Empleado{nombre: "Michel",posicion: "Prof",sueldo: 10},
+%Empresa.Empleado{nombre: "Daris",posicion: "Prof",sueldo: 11},
+%Empresa.Empleado{nombre: "Michel2",posicion: "Prof",sueldo: 12},
+%Empresa.Empleado{nombre: "Daris2",posicion: "Prof",sueldo: 11} ]
