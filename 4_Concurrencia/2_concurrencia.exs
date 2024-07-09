@@ -5,8 +5,6 @@ defmodule Concurrencia do
       x -> IO.puts("Hola proceso, #{x}") # Si no hubiera puesto IO.puts no se imprimiría nada, el proceso no se conecta con el iex
     end
   end
-
-
 end
 
 
